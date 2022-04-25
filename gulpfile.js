@@ -9,3 +9,13 @@ gulp.task('browser-sync', function() {
   });
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
+
+
+
+const cleanCSS = require('gulp-clean-css');
+ 
+gulp.task('minify-css', () => {
+  return gulp.src('./*.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('dist'));
+});
