@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Constantin2501/repair-design#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.51.0"
   },
   "dependencies": {
     "browser-sync": "^2.27.9",
