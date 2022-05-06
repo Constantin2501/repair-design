@@ -408,6 +408,16 @@ img {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
 }
+.section-title__text {
+  text-transform: none;
+  font-family: "Futura Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.428rem;
+  max-width: 52.928rem;
+  margin: 1.714rem 2.785rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .section-title__image {
   display: flex;
   align-items: center;
@@ -613,6 +623,13 @@ img {
   padding: 1.214rem 2.6rem;
 }
 
+.design {
+  background: linear-gradient(to bottom, #fff 52%, #131313 50%);
+}
+.design .card__pricetag {
+  min-width: 16.285rem;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px;
@@ -641,6 +658,10 @@ img {
   }
 
   .types__card {
+    margin-bottom: 5rem;
+  }
+
+  .design__card {
     margin-bottom: 5rem;
   }
 
