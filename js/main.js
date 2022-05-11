@@ -45,24 +45,25 @@ $(document).ready( () => {
   });
   // закрытие модалки кликом вне области модального окна
 
-  $(window).scroll( (e) => {
-    if ($(e).scrollTop() != 0) {
+
+  $(document).scroll( () => {
+    let y = $(this).scrollTop();
+    if (y > 800) {
       $('.hero__scroll-up').fadeIn();
-    } 
-    else { 
+    } else {
       $('.hero__scroll-up').fadeOut();
     }
   });
   // появление кнопки "наверх" при прокрутке
-
+  
   $('.hero__scroll-up').click( () => {
     $('body,html').animate({scrollTop:0},800);
+    return false;
   });
   // анимация плавной прокрутки наверх при нажатии кнопки "наверх"
-     
-    
-     
-     
-
+  
+  
+  
+  
 });
 
