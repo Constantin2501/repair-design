@@ -61,8 +61,27 @@ $(document).ready( () => {
     return false;
   });
   // анимация плавной прокрутки наверх при нажатии кнопки "наверх"
-  
-  
+
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  // свайпер
+
+  let next = $('.swiper-button-next');
+  let prev = $('.swiper-button-prev');
+  let bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 10 + bullets.width() + 10)
+  bullets.css('left', prev.width() + 10)
+
   
   
 });
