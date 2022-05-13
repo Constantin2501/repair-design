@@ -73,7 +73,7 @@ $(document).ready( () => {
       prevEl: '.swiper-button-prev',
     }
   });
-  // свайпер
+  // слайдер
 
   let next = $('.swiper-button-next');
   let prev = $('.swiper-button-prev');

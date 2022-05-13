@@ -478,6 +478,14 @@ img {
 .section-title__heading--primary {
   color: #E3B873;
 }
+.section-title__heading--light {
+  color: #fff;
+  font-family: "Futura Book", sans-serif;
+  font-weight: 500;
+  font-size: 1.071rem;
+  line-height: 1.504rem;
+  margin-bottom: 1.428rem;
+}
 .section-title__word {
   display: flex;
   align-items: center;
@@ -488,6 +496,9 @@ img {
   height: 2px;
   background-color: #E3B873;
   margin-left: 2rem;
+}
+.section-title__word--steps::after {
+  margin-left: 5rem;
 }
 .section-title__text {
   text-transform: none;
