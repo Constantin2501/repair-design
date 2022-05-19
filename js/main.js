@@ -75,12 +75,20 @@ $(document).ready( () => {
   });
   // слайдер
 
+
   let next = $('.swiper-button-next');
   let prev = $('.swiper-button-prev');
   let bullets = $('.swiper-pagination');
 
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
+  
+  let nextSteps = $('.swiper-button-next-steps');
+  let prevSteps = $('.swiper-button-prev-steps');
+  let bulletsSteps = $('.swiper-pagination-steps');
+
+  nextSteps.css('left', prevSteps.width() + 10 + bulletsSteps.width() + 10)
+  bulletss.css('left', prevSteps.width() + 10)
 
   
   
