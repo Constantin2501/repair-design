@@ -82,6 +82,8 @@ $(document).ready( () => {
 
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
+
+  // правила отступов навигации слайдера при добавлении контента/слайдов, секция projects
   
   let nextSteps = $('.swiper-button-next-steps');
   let prevSteps = $('.swiper-button-prev-steps');
@@ -90,7 +92,11 @@ $(document).ready( () => {
   nextSteps.css('left', prevSteps.width() + 10 + bulletsSteps.width() + 10)
   bulletss.css('left', prevSteps.width() + 10)
 
+  // правила отступов навигации слайдера при добавлении контента/слайдов, секция steps
+
+  new WOW().init();
   
+  // инициализация билиотеки wow.js
   
 });
 
