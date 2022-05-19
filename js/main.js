@@ -97,6 +97,45 @@ $(document).ready( () => {
   new WOW().init();
   
   // инициализация билиотеки wow.js
+
+  
+  
   
 });
 
+
+$('.modal__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // cтрочное правило
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+    },
+    userPhone: "required",
+    // правило-объект
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, //сообщения
+  messages: {
+    userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв",
+      maxlength: "Имя не больше 15 символов"
+    },
+    userPhone: "Телефон обязателен",
+    userEmail: {
+      required: "Обязательно укажите email",
+      email: "Введите в формаете: name@domain.com"
+    }
+  }
+});
+
+// валидация форм
+
+$('[type=tel]').mask('+7 (000) 00-00-000', {placeholder: "+7 (___) __-___"});
+
+// маска для номера телефона
