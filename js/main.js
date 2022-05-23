@@ -82,7 +82,6 @@ $(document).ready( () => {
 
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
-
   // правила отступов навигации слайдера при добавлении контента/слайдов, секция projects
   
   let nextSteps = $('.swiper-button-next-steps');
@@ -91,17 +90,50 @@ $(document).ready( () => {
 
   nextSteps.css('left', prevSteps.width() + 10 + bulletsSteps.width() + 10)
   bulletss.css('left', prevSteps.width() + 10)
-
   // правила отступов навигации слайдера при добавлении контента/слайдов, секция steps
 
   new WOW().init();
-  
   // инициализация билиотеки wow.js
 
   
   
   
 });
+
+// Функция ymaps.ready() будет вызвана, когда
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+          center: [55.751574, 37.573856],
+          zoom: 9
+      }, {
+          searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Наш офис',
+          balloonContent: 'Вход со двора'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/location.png',
+          // Размеры метки.
+          iconImageSize: [32, 32],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+      })
+
+  myMap.geoObjects
+      .add(myPlacemark);
+});
+// карта
 
 
 $('.modal__form').validate({

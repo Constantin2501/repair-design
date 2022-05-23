@@ -909,6 +909,20 @@ img {
   margin-top: 0;
   margin-bottom: 3.214rem;
 }
+.footer__title-map {
+  max-width: 42.071rem;
+  margin: auto;
+  color: #E3B873;
+  line-height: 2rem;
+  margin-bottom: 1.857rem;
+}
+.footer__social {
+  text-align: center;
+  margin-bottom: 3.092rem;
+}
+.footer__social-mail {
+  margin-right: 1.071rem;
+}
 .footer__form {
   display: flex;
   flex-wrap: wrap;
@@ -940,6 +954,10 @@ img {
 .footer__menu {
   background-color: #131313;
   padding: 4.285rem 0;
+}
+.footer__map {
+  margin-bottom: 4rem;
+  min-height: 465px;
 }
 
 .modal {
