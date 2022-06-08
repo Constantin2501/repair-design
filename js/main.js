@@ -163,6 +163,21 @@ $('.modal__form').validate({
       required: "Обязательно укажите email",
       email: "Введите в формаете: name@domain.com"
     }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+        $(form)[0].reset();
+        modal.removeClass('modal--visible');        
+      },
+      error: function (response) {
+        console.error('Ошибка запроса ' + response);
+      }
+    });
   }
 });
 
