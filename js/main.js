@@ -96,8 +96,8 @@ $(document).ready( () => {
   // инициализация билиотеки wow.js
 
   
-  
-  
+
+
 });
 
 // Функция ymaps.ready() будет вызвана, когда
@@ -186,3 +186,20 @@ $('.modal__form').validate({
 $('[type=tel]').mask('+7 (000) 00-00-000', {placeholder: "+7 (___) __-___"});
 
 // маска для номера телефона
+
+
+var player;
+  $('.video__play').on('click',  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'xs0ItUmCODk',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+  
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
